@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Romantic Letter For You</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="ambient-glow"></div>
+
+    <main class="scene-container">
+        <header class="scene-header" id="scene-header">
+            <h1 class="catchy-title font-cursive">A letter from my heart</h1>
+            <p class="catchy-subtitle font-serif-romantic">written just for you</p>
+        </header>
+
+        <div class="perspective-container">
+
+            <div id="envelope" class="envelope-wrapper pulse-ambient">
+
+                <div class="envelope-back">
+                    <div class="envelope-back-pattern"></div>
+                    <div class="envelope-back-shadow"></div>
+                </div>
+
+                <div id="photobooth-strip" class="photobooth-strip" title="Tap to view our memories" role="button"
+                    aria-label="Photobooth Film Strip">
+                    <div class="film-tape"></div>
+                    <div class="film-strip-inner">
+                        <div class="film-header">
+                            <span class="film-logo">✦ OUR MEMORIES ✦</span>
+                            <span class="film-cut-tag">LIFE 4 CUTS</span>
+                        </div>
+
+                        <div class="film-photos">
+                            <div class="film-frame">
+                                <div class="film-img-box">
+                                    <img src="https://cdn.phototourl.com/member/2026-10-11-acb11f68-6d1b-4212-b7a3-ca3564ded4e9.jpg" alt="Our memory 1" class="film-img">
+                                    <div class="film-gloss"></div>
+                                </div>
+                                <span class="film-frame-label font-handwriting">Cutest person </span>
+                            </div>
+
+                            <div class="film-frame">
+                                <div class="film-img-box">
+                                    <img src="https://cdn.phototourl.com/member/2026-10-11-12ccfa0c-1049-4b2c-a9b7-ec029a383c76.jpg" alt="Our memory 2" class="film-img">
+                                    <div class="film-gloss"></div>
+                                </div>
+                                <span class="film-frame-label font-handwriting">littel princess </span>
+                            </div>
+
+                            <div class="film-frame">
+                                <div class="film-img-box">
+                                    <img src="https://cdn.phototourl.com/member/2026-10-11-16e7f6fd-e357-4260-b5de-a90eb86c7018.jpg" alt="Our memory 3" class="film-img">
+                                    <div class="film-gloss"></div>
+                                </div>
+                                <span class="film-frame-label font-handwriting">Miss universe  ❤️</span>
+                            </div>
+                        </div>
+
+                        <div class="film-footer">
+                            <span class="film-date">OCT 11 • 11:11 PM</span>
+                            <div class="film-barcode">
+                                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="letter" class="letter-card">
+
+                    <div class="letter-top-bar">
+                        <div class="letter-accent-top">
+                            <span class="accent-line"></span>
+                            <i class="fa-solid fa-heart accent-heart"></i>
+                            <span class="accent-line"></span>
+                        </div>
+                        <span class="page-indicator" id="pageIndicator">Page 1 of 3</span>
+                        <button class="letter-close-btn" id="btnCloseEnvelopeTop" title="Close & Re-seal Envelope"
+                            aria-label="Close Envelope">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <div id="letter-content" class="letter-content letter-scroll">
+
+                        <article class="letter-page active" data-page="1">
+                            <h2 class="letter-salutation font-cursive">My Dearest Malkin Devina Ji, ❤️🌸ye letter apke liye please letter ko pura padhna
+                          </h2>
+                            <p class="letter-paragraph font-serif-romantic">
+                                Aaj Navratri ka pehla din hai, aur is special din par main bas tumhare liye dil se ek pyari si wish karna chahta hoon. Maa Durga tumhari life ko hamesha khushiyon se bhar de, tumhare chehre ki smile kabhi kam na ho, aur tumhari life mein jitni bhi pareshaniyan aayein, Maa tumhe un sabse ladne ki strength de.
+                            </p>
+                            <p class="letter-paragraph font-serif-romantic">
+                                Jaise Navratri ki roshni har taraf positivity lekar aati hai, waise hi tumhari smile bhi hamesha tumhare aas-paas khushiyan failati rahe. ❤️
+                            </p>
+                        </article>
+
+                        <article class="letter-page" data-page="2">
+                            <p class="letter-paragraph font-serif-romantic">
+                                Mujhe pata hai tum chhoti-chhoti baaton ko lekar bahut sochte ho aur tension lete ho. Aur I know, kabhi-kabhi main usmein aag mein ghee daalne jaisa kaam karta hoon. Lekin main kya karun yaar, mujhse galtiyan ho jaati hain, par main jaanbujhkar nahi karta.
+                            </p>
+                            <p class="letter-paragraph font-serif-romantic">
+                                Main tumse rudely baat nahi karta. Main shayad aisa isliye ho gaya hoon kyunki meri life mein log hamesha mujhe chhodkar chale jaate hain. Lekin tumhare liye meri feelings bilkul jhoothi nahi hain. Maine tumhe apni life ka ek bahut important person maana hai. ❤️
+                            </p>
+                        </article>
+
+                        <article class="letter-page" data-page="3">
+                            <p class="letter-paragraph font-serif-romantic">
+                                Mujhe nahi pata yaar, main tumse itna pyaar kyun karta hoon. Maine kabhi socha bhi nahi tha ki mujhe dobara kabhi pyaar hoga, lekin jab se maine tumhe dekha hai aur tumse baat karna shuru kiya hai, meri feelings har din aur badhti ja rahi hain.
+                            </p>
+                            <p class="letter-paragraph font-serif-romantic">
+                                Jab tum mujhe kehte ho ki tum mujhe sirf ek friend ki tarah dekhte ho, toh mujhe bahut bura lagta hai. Aur jab tum gusse mein mujhe block kar dete ho, toh aisa lagta hai jaise kisi ne mere dil mein chaku maar diya ho.
+                            </p>
+                            <p class="letter-paragraph font-serif-romantic">
+                                Phir bhi main 1% hope lekar chalta hoon ki shayad kabhi tum meri feelings samajh paoge. Maine tumse door hone ki koshish bhi ki, lekin mujhse nahi ho paata. I don't know ki ise pyaar kahun ya pagalpan, but one thing I know is that I love you, aur mere dil mein tumhare liye jo feelings hain, woh sachchi hain.
+                            </p>
+                            <p class="letter-paragraph font-serif-romantic">
+                                Sorry yaar, itna kuch bol diya. Tum khush raho, tumhari khushi mein hi meri khushi hai.
+                            </p>
+                            <div class="letter-sign-section">
+                                <span class="letter-date">HAPPY NAVRATRI 🌸</span>
+                                <div class="letter-sign-box">
+                                    <span class="letter-sign-text font-serif-romantic">With warm wishes,</span>
+                                    <span class="letter-sign font-cursive">Happy Navratri ❤️</span>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+
+                    <footer class="letter-footer">
+                        <button class="nav-btn" id="prevBtn" disabled aria-label="Previous Page">
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>Previous</span>
+                        </button>
+
+                        <button class="nav-btn close-btn" id="btnCloseEnvelope" aria-label="Close and Re-seal envelope">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>Close</span>
+                        </button>
+
+                        <button class="nav-btn primary" id="nextBtn" aria-label="Next Page">
+                            <span id="nextBtnText">Next Page</span>
+                            <i id="nextBtnIcon" class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </footer>
+
+                </div>
+
+                <div class="flap flap-left"></div>
+                <div class="flap flap-right"></div>
+                <div class="flap flap-bottom"></div>
+
+                <div id="top-flap" class="flap flap-top">
+                    <div class="flap-top-overlay"></div>
+                </div>
+
+                <div id="wax-seal" class="wax-seal" role="button" aria-label="Open Letter">
+                    <div class="wax-seal-inner">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <p id="open-hint" class="open-hint font-serif-romantic">Tap the seal to open</p>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
